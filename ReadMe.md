@@ -11,4 +11,28 @@ For building and running the application you need:
 
 ## Running the application locally
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.dws.challenge.ChallengeApplication` class from your IDE.
+1. Please clone the codebase  from the github using below URL.
+```bash
+git clone https://github.com/Raghuveer0437/Challenge.git
+```
+2. Your default branch is main you need to checkout master branch
+```bash
+git checkout master
+```
+3.There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.dws.challenge.ChallengeApplication` class from your IDE.
+
+4.After the application is up on default port 8080, Please check the below CURL from postman
+```bash
+curl --location --request POST 'http://localhost:8080/v1/accounts/fundTransfer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":1,
+    "fromAccountId":1234,
+    "toAccountId":5678,
+    "transferAmount": 1
+}'
+```
+
+
+
+
